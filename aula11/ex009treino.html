@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desculbra se voce é BR!</title>
+    <style>
+        body{
+            background: linear-gradient(0deg, #2138ac 0%, #2dcefd 100%);
+            background-repeat: no-repeat;
+            height:100vh;
+            color: #faebd7;
+            font: normal 18pt Arial;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        h1{
+            text-align: center;
+            align-self: center;
+        }
+        .container{
+            display: flex;
+            background: linear-gradient(0deg, #f0144b , #f72222 50%);
+            justify-content: center;
+            align-items: center;
+            min-width: 40rem;
+            height: 500px;
+            border-radius: 0px 50px;
+            margin: 20px 2rem;
+        }
+        #txtpais{
+            width: 150px;
+            height: 25px;
+        }
+        input{
+            margin: 0px 10px ;
+            border: none;
+        }
+        input[type="button"]{
+            border-radius: 5px;
+            height: 50px;
+            width: 100px;
+            font: normal 15pt Impact;
+            background: #0debf3;
+        }
+        input[type="button"]:hover{
+            background: #0d97f3;
+        }
+        input[type="button"]:active{
+            background: #110441;
+            color: #faebd7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Você é Brasileiro ou Estrangeiro?</h1>
+    <div class="container">   
+        <input type="text" name="txtpais" id="txtpais" placeholder="Digite seu Pais">
+        <input type="button" value="verificar" onclick="verificar()">
+        <div id="res"></div>
+    </div>
+    <script>
+        
+        function verificar(){
+        var pais = document.getElementById('txtpais')
+        var res = document.querySelector('div#res')
+        var nac = pais.value
+            if (nac == ""){
+                res.innerHTML = 'Pais nao digitado!'
+
+            } else {
+                res.innerHTML = `Seu pais de origem é ${nac}!`
+                if (nac == "Brasil"||nac == "brasil") { 
+                    res.innerHTML += `<p>Você é Brasileiro!</P>`
+                } else {
+                    res.innerHTML += `<p>Você é Estrangeiro!</p>`
+                }
+            }
+        }
+    </script>
+</body>
+</html>

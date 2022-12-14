@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modelo de exercicio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Analisador de Numeros</h1>
+    </header>
+    <section>
+        <div>
+            Numero (de 1 a 100):
+            <input type="number" name="fnum" id="fnum" min="1" max="100">
+            <input type="button" value="Adicionar" onclick="adicionar()">
+            <input type="button" value="Limpar Dadoss" onclick="Limpar()">
+            <br><br><select id="flista" size="6"></select>
+            <br><input type="button" value="Finalizar" onclick="finalizar()">
+        </div>
+        <div>
+            <p id="res"></p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Cadrado</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
